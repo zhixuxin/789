@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMapNode url="" title="管理员面板" description="">
+  <siteMapSubNode url="" title="管理员信息" description="">
+    <siteMapSubNode url="Default3.aspx" title="本校教师" description="">
+
+    </siteMapSubNode>
+  </siteMapSubNode>
+</siteMapNode>
+
+

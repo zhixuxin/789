@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        #main
+        {
+            width:800px;
+            height:600px;
+            background-color:#aabbcc;
+        }
+        #top
+        {
+            width:100%;
+            height:100px;
+            background-color:#aaa;
+        }   
+        #content
+        {
+            width:100%;
+            height:500px;
+            margin-right: 2px;
+        }
+        
+        #left
+        {
+            height: 100%;
+            width: 162px;
+            float:left;
+        }
+        #right
+        {
+            width: 637px;
+            height: 100%;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="main">
+        <div id="top">
+                            
+        </div>
+        <div id="content">
+           
+                
+            <div id="left">
+                
+              
+                <asp:TreeView ID="TreeView1" runat="server" 
+                    Height="466px" Width="157px" 
+                    onselectednodechanged="TreeView1_SelectedNodeChanged">
+                    <DataBindings>
+                        <asp:TreeNodeBinding DataMember="siteMapNode" NavigateUrlField="url" 
+                            TextField="title" />
+                        <asp:TreeNodeBinding DataMember="siteMapSubNode" NavigateUrlField="url" 
+                            TextField="title" />
+                        <asp:TreeNodeBinding DataMember="siteMapSubNode" NavigateUrlField="url" 
+                            TextField="title" />
+                    </DataBindings>
+                </asp:TreeView>
+                
+              
+            </div>
+
+            <div id="right">
+                 <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+        
+                 </asp:ContentPlaceHolder>
+        
+                            <asp:Label ID="Label1" runat="server" Text="添加数据："></asp:Label>  
+                            <br />  
+                       <asp:Label ID="Label2" runat="server" Text="学号："></asp:Label>  
+                       <asp:TextBox ID="StuNo" runat="server"></asp:TextBox>  
+                             <br />  
+        
+            </div>
+       
+       
+        </div>
+    </div>
+       
+
+   
+               <%-- <asp:XmlDataSource ID="XmlDataSource1" runat="server" 
+                    DataFile="~/MenuXMLFile.xml"></asp:XmlDataSource>--%>
+
+    </form>
+</body>
+</html>
